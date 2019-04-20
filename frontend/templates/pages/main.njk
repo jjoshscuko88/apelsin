@@ -1,0 +1,57 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content main">
+    <div class="main__banner">
+      <div class="single-item main__banner-slider">
+        {% for i in range(0, 2) -%}
+          <!-- Фон задал здесь, чтоб пользователь мог поменять -->
+          <div class="main__banner-slider-item"
+            style="background-image: url(/assets/mainbanner.jpg);
+            background-position: center; background-size: cover">
+            <div class="app__limiter main__banner-limiter">
+              <h2 class="main__banner-slider-item-heading">Апельсин</h2>
+              <h3 class="main__banner-slider-item-subheading">Рекламное агенство &laquo;Апельсин&raquo;
+                Ваш надежный партнер в мире рекламы</h3>
+              <p class="main__banner-slider-item-content">Мы экспериментируем с современными материалами и внедряем
+                передовые производственные технологии. Постоянно стремимся к сокращению издержек,
+                чтобы поддерживать приемлемые цены.</p>
+            </div>
+          </div>
+        {%- endfor %}
+      </div>
+    </div>
+    <div class="app__limiter main__limiter">
+      {% include 'includes/blocks/main/mainprogress.njk' %}
+      {% include 'includes/blocks/main/maininterestingoffers.njk' %}
+    </div>
+    <div class="main__portfolio">
+      <div class="app__limiter main__portfolio-limiter">
+        <h2 class="heading main__portfolio-heading">Портфолио</h2>
+        <div class="multiple-items3 main__portfolio-slider">
+          {% for i in range(0, 2) -%}
+            {% for i in range(1, 4) -%}
+              <div class="main__portfolio-slider-item">
+                <div class="main__portfolio-slider-item-block">
+                  <img class="main__portfolio-slider-item-img" src="/assets/mainportfolio{{ i }}.jpg" alt="">
+                  <div class="main__portfolio-slider-item-block-name">{% if (i === 1) %}Росбанк{% else %}Бегемотиккк{% endif %}</div>
+                  <div class="main__portfolio-slider-item-block-letter">
+                    {% if (i === 1) %}Р{% else %}Ж{% endif %}</div>
+                </div>
+              </div>
+            {%- endfor %}
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+    {% include 'includes/blocks/main/mainabout.njk' %}
+    {% include 'includes/blocks/clientsslider.njk' %}
+    {% include 'includes/blocks/main/mainreviews.njk' %}
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

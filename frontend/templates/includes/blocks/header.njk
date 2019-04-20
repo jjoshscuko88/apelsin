@@ -1,0 +1,45 @@
+{% set pageList = {
+  '/pages/main.html': 'Главная',
+  '/pages/products.html': 'Продукция',
+  '/pages/portfolio.html': 'Портфолио',
+  '/pages/about.html': 'О нас',
+  '/pages/contacts.html': 'Контакты'
+} %}
+
+<header class="header">
+  <div class="app__limiter header__limiter">
+    <div class="header__limiter-logocontacts">
+      <a href="/pages/main.html" class="header__logo"></a>
+      <div class="header__contacts">
+        <div class="header__contacts-city">
+          г. Елец,<br> ул. Свердлова, 143
+        </div>
+        <a href="88002505351" class="header__contacts-tel">
+          8 800 250-53-51<br><span>Пн-Пт: с 9:00 до 18:00</span>
+        </a>
+        <button class="header__contacts-ordercall" type="button" data-popup-id="callback">Заказать звонок</button>
+      </div>
+    </div>
+  </div>
+  <div class="header__searchnav">
+    <div class="header__searchnav-block">
+      <button class="header__searchnav-search" data-minipopup-id="search-popup" type="button"></button>
+      <button class="header__nav-burger" data-minipopup-id="burger"></button>
+    </div>
+    <div id="burger" class="minipopup minipopup_hidden header__nav-inner">
+      <button class="header__nav-inner-close minipopup__closer" type="button"></button>
+      {% for page, label in pageList %}
+        <a class="header__link{% if (label == 'Главная') %} header__link_active{% endif %}" href="{{ page }}">{{ label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  <form id="search-popup" class="minipopup minipopup_hidden header__search-popup">
+    <button class="minipopup__closer header__search-popup-closer"></button>
+    <div class="searchpopup-inner">
+      <div class="search-block">
+        <input type="search" class="search-block-input">
+        <button class="search-block-submit" type="submit">Поиск</button>
+      </div>
+    </div>
+  </form>
+</header>

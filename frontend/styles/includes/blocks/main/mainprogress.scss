@@ -1,0 +1,146 @@
+.main__progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 95px;
+}
+
+.main__progress-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  min-height: 226px;
+  box-shadow: 8px 1px 59px rgba(54, 54, 54, 0.1);
+  background-color: #ffffff;
+}
+
+.main__progress-qualityassur-img,
+.main__progress-completeprojects-img,
+.main__progress-quantityclients-img {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  position: absolute;
+  top: -48px;
+  left: 20px;
+  & span {
+    display: block;
+    color: #fba400;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 41.26px;
+    padding-left: 10px;
+    margin-bottom: 12px;
+  }
+}
+
+.main__progress-quantityclients-img {
+  & span {
+    padding-left: 0;
+  }
+}
+
+.main__progress-block-content {
+  padding-left: 45px;
+  padding-right: 60px;
+}
+
+.main__progress-heading {
+  color: #363636;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.main__progress-subheading {
+  color: #363636;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+@media #{$media1175} {
+  .main__progress {
+    .main__progress-block {
+      min-width: 30%;
+      max-width: 30%;
+      top: -10px;
+    }
+
+    .main__progress-qualityassur-img,
+    .main__progress-completeprojects-img,
+    .main__progress-quantityclients-img {
+      & span {
+        font-size: 70px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .main__progress-block-content {
+      padding-left: 30px;
+      padding-right: 20px;
+    }
+  }
+}
+
+@media #{$media1000} {
+  .main__progress {
+    .main__progress-qualityassur-img,
+    .main__progress-completeprojects-img,
+    .main__progress-quantityclients-img {
+      top: -30px;
+      & img {
+        min-width: 30%;
+        max-width: 30%;
+      }
+    }
+  }
+}
+
+@media #{$media850} {
+  .main__progress {
+    .main__progress-heading {
+      font-size: 16px;
+    }
+
+    .main__progress-subheading {
+      font-size: 14px;
+    }
+  }
+}
+
+@media #{$media800} {
+  .main__progress {
+    .main__progress-qualityassur-img,
+    .main__progress-completeprojects-img,
+    .main__progress-quantityclients-img {
+      top: -20px;
+      left: 0;
+      & span {
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+@media #{$media650} {
+  .main__progress {
+    margin-bottom: 0;
+    flex-direction: column;
+
+    .main__progress-block {
+      min-width: 293px;
+      max-width: 293px;
+      margin: 0 auto 40px;
+    }
+
+    .main__progress-qualityassur-img,
+    .main__progress-completeprojects-img,
+    .main__progress-quantityclients-img {
+      top: -42px;
+      left: 25px;
+      & span {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

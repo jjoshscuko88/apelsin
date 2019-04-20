@@ -1,0 +1,22 @@
+<div class="app__limiter reviews">
+  <h2 class="heading reviews-heading">Отзывы клиентов</h2>
+  <div class="reviews-blocks">
+    {% for i in range(0, 2) -%}
+      <div class="reviews-blocks-item">
+        <div class="reviews-author">
+          <div class="reviews-author-img">
+            <img src="/assets/mainreviewsimg{{ loop.index }}.jpg" alt="author">
+          </div>
+          <div class="reviews-author-name">
+            <div>Дмитрий Дмитриев</div>
+            <span class="reviews-author-date">19.12.2018</span>
+          </div>
+        </div>
+        <p class="reviews-blocks-item-review">
+          {{ helper.getLorem(25) }}
+        </p>
+        <button class="reviews-blocks-item-more" type="button">Подробнее</button>
+      </div>
+    {%- endfor %}
+  </div>
+</div>

@@ -1,0 +1,64 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}Карточка{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content card">
+    <div class="breadcrumb about__breadcrumb">
+      <div class="app__limiter breadcrumb__limiter">
+        <div class="breadcrumb__limiter-heading">Портфолио</div>
+        <div class="breadcrumb__limiter-link">
+          <a href="#" class="breadcrumb__limiter-link-item">Главная / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Продукция / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Наружняя реклама / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Вывеска из оцинковки</a>
+        </div>
+      </div>
+    </div>
+    <div class="app__limiter card__limiter">
+      <div class="card__gallery">
+        <a class="card__gallery-bigimg" href="/assets/img_4.jpg" data-fancybox="gallery">
+          <img src="/assets/img_4.jpg" alt=""/>
+        </a>
+        <div class="card__gallery-minimglist">
+          <a class="card__gallery-minimg" href="/assets/img_1.jpg" data-fancybox="gallery">
+            <img src="/assets/thumb/img_1.jpg" alt=""/>
+          </a>
+          <a class="card__gallery-minimg" href="/assets/img_2.jpg" data-fancybox="gallery">
+            <img src="/assets/thumb/img_2.jpg" alt=""/>
+          </a>
+          <a class="card__gallery-minimg" href="/assets/img_3.jpg" data-fancybox="gallery">
+            <img src="/assets/thumb/img_3.jpg" alt=""/>
+          </a>
+        </div>
+      </div>
+      <div class="card__content">
+        <h3 class="card__content-heading">Вывеска из оцинковки</h3>
+        <p class="card__content-description">Распространенное понятие. Ее элементы можно встретить на любой улице
+          более-менее крупного города. Что уже говорить о мегаполисах — здесь наружная реклама давно стала традиционным
+          способом акцентирования внимания покупателей. На центральных улицах буквально с расстоянием в несколько
+          десятков метров друг от друга размещены ситилайты и объемные фигуры.</p>
+        <div class="card__content-price">от 10 000 руб</div>
+        <section class="tabs">
+          <input id="tab_1" type="radio" name="tab" checked="checked" />
+          <input id="tab_2" type="radio" name="tab" />
+          <input id="tab_3" type="radio" name="tab" />
+          <label for="tab_1" id="tab_l1">Описание</label>
+          <label for="tab_2" id="tab_l2">Характеристики</label>
+          <label for="tab_3" id="tab_l3">Стоимость</label>
+          <div style="clear:both"></div>
+          <div class="tabs_cont">
+            <div id="tab_c1"><span class="strong">Распространенное понятие.</span>{{ helper.getLorem(30) }}</div>
+            <div id="tab_c2">{{ helper.getLorem(40) }}</div>
+            <div id="tab_c3">{{ helper.getLorem(45) }}</div>
+          </div>
+        </section>
+        <a href="#" class="card__checkout">Оформить заказ</a>
+      </div>
+    </div>
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

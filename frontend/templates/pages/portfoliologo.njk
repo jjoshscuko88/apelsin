@@ -1,0 +1,32 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}Портфолио-лого{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content portfoliologo">
+    <div class="breadcrumb">
+      <div class="app__limiter breadcrumb__limiter">
+        <div class="breadcrumb__limiter-heading">Портфолио</div>
+        <div class="breadcrumb__limiter-link">
+          <a href="#" class="breadcrumb__limiter-link-item">Главная / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Портфолио</a>
+        </div>
+      </div>
+    </div>
+    <div class="app__limiter portfoliologo__limiter">
+      <h3 class="heading">Портфолио</h3>
+      <div class="portfoliologo__limiter-banners">
+        {% for i in range(0, 6) -%}
+          <a href="#" class="portfoliologo__limiter-banners-link">
+            <img src="/assets/portfoliologo{{ loop.index }}.jpg" alt="banner">
+            <span>Lorem</span>
+          </a>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

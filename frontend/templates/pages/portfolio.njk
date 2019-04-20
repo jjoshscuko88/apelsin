@@ -1,0 +1,61 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}Портфолио{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content portfolio">
+    <div class="breadcrumb portfolio__breadcrumb">
+      <div class="app__limiter breadcrumb__limiter">
+        <div class="breadcrumb__limiter-heading">Портфолио</div>
+        <div class="breadcrumb__limiter-link">
+          <a href="#" class="breadcrumb__limiter-link-item">Главная / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Портфолио</a>
+        </div>
+      </div>
+    </div>
+    <div class="app__limiter portfolio__limiter">
+      {% for i in range(0, 4) -%}
+          <div class="portfolio__block">
+            <a href="#" class="portfolio__block-bigbanner">
+              <img src="/assets/portfoliobig.jpg" alt="banner">
+              <div class="portfolio__block-bigbanner-preview">
+                <div class="portfolio__block-bigbanner-preview-content">
+                  <h4>Росбанк</h4>
+                  <p>{{ helper.getLorem(15) }}</p>
+                </div>
+                <div class="portfolio__block-bigbanner-preview-date">
+                  25.12.2018
+                </div>
+              </div>
+            </a>
+            <div class="portfolio__limiter-smallbanners">
+              <a href="#" class="portfolio__limiter-smallbanners-item">
+                <img src="/assets/portfoliomin1.jpg" alt="banner">
+                <div class="portfolio__limiter-smallbanners-item-preview">
+                  <h4 class="portfolio__limiter-smallbanners-item-preview-heading">Росбанк</h4>
+                  <p class="portfolio__limiter-smallbanners-item-preview-content">{{ helper.getLorem(3) }}</p>
+                </div>
+                <div class="portfolio__limiter-smallbanners-item-canvas">
+                  C
+                </div>
+              </a>
+              <a href="#" class="portfolio__limiter-smallbanners-item">
+                <img src="/assets/portfoliomin2.jpg" alt="banner">
+                <div class="portfolio__limiter-smallbanners-item-preview">
+                  <h4 class="portfolio__limiter-smallbanners-item-preview-heading">Росбанк</h4>
+                  <p class="portfolio__limiter-smallbanners-item-preview-content">{{ helper.getLorem(3) }}</p>
+                </div>
+                <div class="portfolio__limiter-smallbanners-item-canvas">
+                  C
+                </div>
+              </a>
+            </div>
+          </div>
+        {%- endfor %}
+    </div>
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

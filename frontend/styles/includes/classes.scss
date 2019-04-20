@@ -1,0 +1,150 @@
+.breadcrumb {
+  width: 100%;
+  background: #fb3800;
+  padding: 15px 0;
+  margin-bottom: 50px;
+
+  .breadcrumb__limiter-heading {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .breadcrumb__limiter-link-item {
+    color: #ffffff;
+    font-size: 14px;
+    opacity: 0.6;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.about__description.user-input {
+  h2 {
+    font-size: 48px;
+  }
+}
+
+.main__about-description.user-input,
+.about__description.user-input {
+  p {
+    font-size: 18px;
+  }
+
+  h2 {
+    margin-top: 25px;
+  }
+
+  @media #{$media800} {
+    h2 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.user-input {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, img {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1, h2, h3 {
+    color: #363636;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h4, h5, h6 {
+    color: #363636;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+
+  pre {
+    color: #363636;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  p {
+    color: #363636;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  a, ol, ul, li {
+    color: #363636;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  img, iframe {
+    max-width: 100%;
+  }
+}
+
+.heading {
+  color: #363636;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 55px;
+}
+
+@media #{$media800} {
+  .heading {
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  .breadcrumb {
+    margin-bottom: 20px;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid #363636;
+}
+
+.slick-prev:before {
+  border-left: 1px solid #363636;
+  transform: rotate(-45deg);
+  top: 4px;
+  left: 4px;
+}
+
+.slick-next:before {
+  border-right: 1px solid #363636;
+  transform: rotate(45deg);
+  top: 4px;
+  right: 4px;
+}
+
+.slick-dots li button {
+  display: none;
+}
+
+
+@media #{$media650} {
+  .heading {
+    font-size: 38px;
+  }
+}
+

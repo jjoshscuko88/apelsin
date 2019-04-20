@@ -1,0 +1,41 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}Продукция{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content products">
+    <div class="breadcrumb">
+      <div class="app__limiter breadcrumb__limiter">
+        <div class="breadcrumb__limiter-heading">Продукция</div>
+        <div class="breadcrumb__limiter-link">
+          <a href="#" class="breadcrumb__limiter-link-item">Главная / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Наша продукция</a>
+        </div>
+      </div>
+    </div>
+    <div class="app__limiter">
+      <h3 class="heading">Продукция</h3>
+      <div class="products__preview">
+        {% for i in range(0, 9) -%}
+          <a href="#" class="products__preview-item">
+            <div class="products__preview-item-img">
+              <img src="/assets/productsimg{{ loop.index }}.jpg" alt="img">
+            </div>
+            <h6 class="products__preview-heading">{{ helper.getLorem(3) }}</h6>
+          </a>
+        {%- endfor %}
+        <a href="#" class="products__preview-item">
+          <div class="products__preview-item-img">
+            <img src="/assets/productsimg10.jpg" alt="img">
+          </div>
+          <h6 class="products__preview-heading">{{ helper.getLorem(3) }}</h6>
+          <span class="products__preview-heading-title">(например по пожарной безопасности, для детских садов, для садиков, для магазинов и т.д.)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

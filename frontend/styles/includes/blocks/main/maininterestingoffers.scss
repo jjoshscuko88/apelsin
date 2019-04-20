@@ -1,0 +1,76 @@
+  .main__interestingoffers {
+    margin-bottom: 100px;
+  }
+
+  .main__interestingoffers-heading {
+    margin-bottom: 35px;
+  }
+
+  .main__interestingoffers-blocks {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main__interestingoffers-block-item {
+    width: 280px;
+    display: flex;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .main__interestingoffers-block-item-num {
+    color: #fba400;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-right: 8px;
+  }
+
+  .main__interestingoffers-block-item-offers {
+    color: #363636;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    padding-top: 6px;
+  }
+
+@media #{$media850} {
+  .main__interestingoffers {
+    .main__interestingoffers-block-item-offers {
+      font-size: 16px;
+    }
+  }
+}
+
+@media #{$media750} {
+  .main__interestingoffers {
+    .main__interestingoffers-blocks {
+      flex-wrap: wrap;
+    }
+    .main__interestingoffers-block-item {
+      min-width: 48%;
+      max-width: 48%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media #{$media650} {
+  .main__interestingoffers {
+    .main__interestingoffers {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media #{$media500} {
+  .main__interestingoffers {
+    .main__interestingoffers-block-item {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+}

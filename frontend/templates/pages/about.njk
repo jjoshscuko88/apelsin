@@ -1,0 +1,65 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}О компании{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content about">
+    <div class="breadcrumb about__breadcrumb">
+      <div class="app__limiter breadcrumb__limiter">
+        <div class="breadcrumb__limiter-heading">Портфолио</div>
+        <div class="breadcrumb__limiter-link">
+          <a href="#" class="breadcrumb__limiter-link-item">Главная / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">О компании</a>
+        </div>
+      </div>
+    </div>
+    <div class="app__limiter about__limiter">
+      <h1 class="about__namecompany">Апельсин</h1>
+      <div class="about__description user-input">
+        <h2>Рекламное агенство «Апельсин»</h2>
+        <p>Для развития бизнеса Вам нужна реклама? Рекламное агентство "Апельсин"
+          предлагает свои услуги в проведении рекламных кампаний, качественное и оперативное изготовление и размещение рекламы.</p>
+        <p>Созданное в 2000 году, агентство имеет в своем арсенале: профессионалов
+          рекламного бизнеса, свое производство рекламной продукции, широкий спектр рекламных услуг. Наши услуги заключают
+          в себе весь процесс производства рекламы: разработка дизайн-макета, согласование, подбор материалов, изготовление
+          и монтаж. Профессионализм нашей команды, включающий специалистов различных видов деятельности: дизайнеров,
+          художников, монтажников и других – позволяет решать самые разнообразные задачи по созданию рекламной продукции
+          в сроки, установленные заказчиком, и с высоким качеством. Плодотворное сотрудничество с нашим агентством поможет
+          Вашему бизнесу выйти на новую высоту!</p>
+        <p class="about__description-content_strong">Работая с нами - Вы получаете ответственного и надежного партнера.
+          Приглашаем к сотрудничеству с нами!</p>
+      </div>
+      <div class="about__qualities">
+        <div class="about__qualities-item">
+          <div class="about__qualities-item-img">
+            <img src="/assets/billboard.png" alt="billboard">
+          </div>
+          <h4 class="about__qualities-item-heading">Особый подход</h4>
+        </div>
+        <div class="about__qualities-item">
+          <div class="about__qualities-item-img">
+            <img src="/assets/quality.png" alt="quality">
+          </div>
+          <h4 class="about__qualities-item-heading">Высокое качество</h4>
+        </div>
+        <div class="about__qualities-item">
+          <div class="about__qualities-item-img">
+            <img src="/assets/calendar.png" alt="calendar">
+          </div>
+          <h4 class="about__qualities-item-heading">Реальные сроки</h4>
+        </div>
+        <div class="about__qualities-item">
+          <div class="about__qualities-item-img">
+            <img src="/assets/briefcase.png" alt="briefcase">
+          </div>
+          <h4 class="about__qualities-item-heading">Реальное портфолио</h4>
+        </div>
+      </div>
+    </div>
+    {% include 'includes/blocks/clientsslider.njk' %}
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

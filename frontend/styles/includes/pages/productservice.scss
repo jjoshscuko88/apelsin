@@ -1,0 +1,75 @@
+.productservice {
+  .productservice__advertisin {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+
+  .productservice__advertisin-content {
+    min-width: 43.44262295081967%;
+    max-width: 43.44262295081967%;
+  }
+
+  .productservice__advertisin-img {
+    width: 475px;
+  }
+
+  .productservice__advertisin-signboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+  }
+
+  .productservice__advertisin-signboard-item {
+    width: 150px;
+    text-align: center;
+    transition: transform 330ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .productservice__advertisin-signboard-item-img {
+    width: 66px;
+    height: 66px;
+    background: grey;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    & img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media #{$media950} {
+  .productservice {
+    .productservice__advertisin {
+      flex-direction: column;
+    }
+
+    .productservice__advertisin-content {
+      min-width: 100%;
+    }
+
+    .productservice__advertisin-signboard {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  .productservice__advertisin-signboard-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media #{$media650} {
+  .productservice {
+
+    .productservice__advertisin-img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}Продукция-услуга{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content productservice">
+    <div class="breadcrumb">
+      <div class="app__limiter breadcrumb__limiter">
+        <div class="breadcrumb__limiter-heading">Наружная реклама</div>
+        <div class="breadcrumb__limiter-link">
+          <a href="#" class="breadcrumb__limiter-link-item">Главная / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Продукция / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Наружная реклама</a>
+        </div>
+      </div>
+    </div>
+    <div class="app__limiter productservice__advertisin">
+      <div class="productservice__advertisin-content user-input">
+        <h3>Наружная реклама</h3>
+        <p>Наружная реклама — распространенное понятие. Ее элементы можно встретить на любой улице более-менее крупного города. Что уже говорить о мегаполисах — здесь наружная реклама давно стала традиционным способом акцентирования внимания покупателей. На центральных улицах буквально с расстоянием в несколько десятков метров друг от друга размещены ситилайты и объемные фигуры. Даже если изначально магазин или офис были незаметными — реклама позволит обратить на них внимание, стимулирует клиентов к действиям.</p>
+        <p>Огромное влияние данной рекламы означает, что средства рекламного бюджета будут распределены правильно, наружные рекламные элементы и конструкции выбраны согласно поставленным целям, способ взаимодействия с целевой аудиторией продуман до мелочей.</p>
+      </div>
+      <img class="productservice__advertisin-img" src="/assets/advertisin.png" alt="img">
+    </div>
+    <div class="app__limiter productservice__advertisin-signboard">
+      {% for i in range(0, 6) -%}
+        <a href="#" class="productservice__advertisin-signboard-item">
+          <div class="productservice__advertisin-signboard-item-img">
+            <img src="/assets/signboard{{ loop.index }}.jpg" alt="signboard">
+          </div>
+          <div class="productservice__advertisin-signboard-name user-input">
+            <h6>{{ helper.getLorem(3) }}</h6>
+          </div>
+        </a>
+      {%- endfor %}
+    </div>
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

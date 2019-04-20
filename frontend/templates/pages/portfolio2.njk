@@ -1,0 +1,74 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}Портфолио2{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content portfolio2">
+    <div class="breadcrumb">
+      <div class="app__limiter breadcrumb__limiter">
+        <div class="breadcrumb__limiter-heading">Портфолио</div>
+        <div class="breadcrumb__limiter-link">
+          <a href="#" class="breadcrumb__limiter-link-item">Главная / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Портфолио</a>
+        </div>
+      </div>
+    </div>
+    <div class="app__limiter portfolio2__limiter">
+      <h3 class="heading portfolio2__heading">Портфолио</h3>
+    </div>
+    <div class="app__limiter portfolio2__mainlogo">
+      <a href="" class="portfolio2__mainlogo-link">
+        <img src="/assets/portfoliologo1.jpg" alt="rosbank">
+        <span>Росбанк</span>
+      </a>
+      <div class="portfolio2__mainlogo-preview">
+        Оформление офисов Росбанка в Липецкой и Тульской областях. 
+      </div>
+    </div>
+    <div class="portfolio2__stands">
+      <div class="portfolio__panel">
+        <div class="app__limiter portfolio__panel-limiter">
+          <div class="portfolio__panel-name">
+            Стенды
+          </div>
+          <!--т.к. по дизайну нет "показать ещё" сделал ссылкой-->
+          <a href="#" class="portfolio__panel-morephoto">
+            10 фото
+          </a>
+        </div>
+      </div>
+      <div class="app__limiter portfolio2__stands-limiter">
+        {% for i in range(0, 3) -%}
+          <a class="portfolio2__stands-item" href="/assets/img_{{ loop.index }}.jpg" data-fancybox="gallery1">
+            <img src="/assets/portfoliomin1.jpg" alt="banner">
+            <span class="portfolio2__stands-item-canvas">р</span>
+          </a href="/assets/portfoliobig.jpg">
+        {%- endfor %}
+      </div>
+    </div>
+    <div class="portfolio2__stickers">
+      <div class="portfolio__panel">
+        <div class="app__limiter portfolio__panel-limiter">
+          <div class="portfolio__panel-name">
+            Наклейки
+          </div>
+          <a href="#" class="portfolio__panel-morephoto">
+            70 фото
+          </a>
+        </div>
+      </div>
+      <div class="app__limiter portfolio2__stickers-limiter">
+        {% for i in range(0, 3) -%}
+          <a class="portfolio2__stickers-item" href="/assets/img_{{ loop.index }}.jpg" data-fancybox="gallery2">
+            <img src="/assets/portfoliomin1.jpg" alt="banner">
+            <span class="portfolio2__stickers-item-canvas">р</span>
+          </a href="/assets/portfoliobig.jpg">
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

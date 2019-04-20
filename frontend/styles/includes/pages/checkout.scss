@@ -1,0 +1,142 @@
+.checkout {
+  .checkout__breadcrumb {
+    margin-bottom: 0;
+  }
+
+  .checkout__inner {
+    width: 100%;
+    padding: 90px 20px 90px;
+    background: #000;
+    background: url(/styles/imgs/checkoutbg.jpg) no-repeat right;
+  }
+
+  .checkout__inner-block {
+    margin: 0 auto;
+    width: 720px;
+    min-height: 397px;
+    padding: 40px;
+    box-shadow: 0 28px 57px rgba(0, 0, 0, 0.07);
+    background-color: #ffffff;
+  }
+
+  .checkout__inner-block-heading {
+    font-size: 37px;
+  }
+
+  .place_holder {
+    z-index: 100;
+    cursor: text;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 100%;
+    display: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .placeinput input:invalid+.place_holder {
+    display: inline;
+  }
+
+  .placeinput {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .place_holder span {
+    color: #fb3800;
+  }
+
+
+  .checkout__inner-block-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & input {
+      width: 202px;
+      height: 42px;
+      border: 1px solid #c6c6c6;
+      padding: 10px 20px;
+    }
+
+    & input, & textarea {
+      color: #101010;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 10px;
+
+
+      &::placeholder {
+        color: #b3b3b3;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    & textarea {
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 90px;
+      max-height: 90px;
+      border: 1px solid #c6c6c6;
+      padding: 15px 20px;
+    }
+  }
+
+  .checkout__inner-block-form-checkout-submit {
+    font-size: 16px;
+    color: #fafafa;
+    padding: 0 20px;
+    line-height: 40px;
+    border-radius: 10px;
+    background: #fb3800;
+    border: 1px solid #fb3800;
+    margin-right: 15px;
+    transition: background 330ms;
+    &:hover {
+      color: #fb3800;
+      background: #fafafa;
+      border: 1px solid #fb3800;
+    }
+
+  }
+
+  .checkout__inner-block-form-checkout-cancel {
+    color: #c2c2c2;
+    font-size: 16px;
+    line-height: 25.45px;
+    text-decoration: underline;
+    padding: 5px;
+  }
+}
+
+@media #{$media800} {
+  .checkout {
+    .checkout__inner {
+      background-position: center;
+    }
+
+    .checkout__inner-block {
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    .checkout__inner-block-form {
+      justify-content: flex-start;
+      & input {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media #{$media650} {
+  .checkout {
+    .checkout__inner {
+      background-size: cover;
+    }
+  }
+}

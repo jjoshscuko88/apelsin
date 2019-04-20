@@ -1,0 +1,56 @@
+{% extends 'includes/layouts/main.njk' %}
+
+{% block title %}Оформить заказ{% endblock %}
+
+{% block content %}
+  {% include 'includes/blocks/header.njk' %}
+
+  <div class="app__content checkout">
+    <div class="breadcrumb checkout__breadcrumb">
+      <div class="app__limiter breadcrumb__limiter">
+        <div class="breadcrumb__limiter-heading">Портфолио</div>
+        <div class="breadcrumb__limiter-link">
+          <a href="#" class="breadcrumb__limiter-link-item">Главная / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Продукция / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Наружная реклама / </a>
+          <a href="#" class="breadcrumb__limiter-link-item">Вывеска из оцинковки</a>
+        </div>
+      </div>
+    </div>
+    <div class="checkout__inner">
+      <div class="checkout__inner-block">
+        <h4 class="heading checkout__inner-block-heading">Оформить заказ</h4>
+        <form action="" class="checkout__inner-block-form">
+          <label class="placeinput">
+            <input  type="text" name="name" required>
+            <div class="place_holder">Имя <span>*</span></div>
+          </label>
+          <label class="placeinput">
+            <input  type="text" name="patronymic" required>
+            <div class="place_holder">Отчество <span>*</span></div>
+          </label>
+          <label class="placeinput">
+            <input  type="text" name="surname" required>
+            <div class="place_holder">Фамилия <span>*</span></div>
+          </label>
+          <label class="placeinput">
+            <input  type="tel" name="usrtel" pattern="[0-11]" required>
+            <div class="place_holder">Телефон <span>*</span></div>
+          </label>
+          <label class="placeinput">
+            <input  type="email" name="email" required>
+            <div class="place_holder">Почта <span>*</span></div>
+          </label>
+          <input type="text" name="company" placeholder="Компания">
+          <textarea name="usrmessage" placeholder="Комментарии"></textarea>
+          <div class="checkout__inner-block-form-checkout">
+            <button class="checkout__inner-block-form-checkout-submit" type="submit">Оформить заказ</button>
+            <button class="checkout__inner-block-form-checkout-cancel" type="button">Отмена</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {% include 'includes/blocks/footer.njk' %}
+{% endblock %}

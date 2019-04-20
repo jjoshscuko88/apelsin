@@ -1,0 +1,31 @@
+@import 'normalize.css/normalize';
+@import 'includes/font-loader';
+@import 'includes/tags';
+
+@import 'includes/app';
+@import 'includes/media.scss';
+@import 'includes/classes.scss';
+
+@import 'includes/blocks/header';
+@import 'includes/blocks/footer';
+@import 'includes/blocks/clientsslider';
+@import 'includes/blocks/minipopups';
+@import 'includes/blocks/popups';
+
+
+@import 'includes/pages/main';
+@import 'includes/pages/about';
+@import 'includes/pages/card';
+@import 'includes/pages/portfolio';
+@import 'includes/pages/portfolio2';
+@import 'includes/pages/portfoliologo';
+@import 'includes/pages/products';
+@import 'includes/pages/productservice';
+@import 'includes/pages/checkout';
+@import 'includes/pages/contacts';
+
+
+
+
+
+
